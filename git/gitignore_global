@@ -1,0 +1,104 @@
+# ------------------------------
+# 🛑 General Ignored Files
+# ------------------------------
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.lock
+*.pid
+*.seed
+*.old
+*.orig
+
+# ------------------------------
+# 🚀 Node.js (for Vue.js, Next.js)
+# ------------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.npmrc
+.npm/
+.vscode/
+
+# ------------------------------
+# 🧹 Editor & OS Specific
+# ------------------------------
+.idea/
+.vscode/
+*.iml
+*.sublime-workspace
+*.sublime-project
+*.code-workspace
+*.log
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.lock
+
+# ------------------------------
+# 🔥 Laravel Specific
+# ------------------------------
+vendor/
+storage/
+.env
+.env.*
+.phpunit.result.cache
+.phpstorm.meta.php
+Homestead.yaml
+Homestead.json
+.valet/
+public/hot
+public/storage
+database/*.sqlite
+database/*.sqlite-journal
+bootstrap/cache/
+
+# ------------------------------
+# 🎨 Frontend (Vue.js, Next.js)
+# ------------------------------
+.nuxt/
+.out/
+.next/
+dist/
+build/
+coverage/
+storybook-static/
+cypress/videos/
+cypress/screenshots/
+
+# ------------------------------
+# 📦 Package Managers
+# ------------------------------
+node_modules/
+bower_components/
+jspm_packages/
+typings/
+.eslintcache
+
+# ------------------------------
+# 🧪 Testing & Coverage
+# ------------------------------
+/coverage
+/junit.xml
+/.nyc_output
+/cypress/videos
+/cypress/screenshots
+
+# ------------------------------
+# 🛠️ Local Development Overrides
+# ------------------------------
+*.local
+*.test
+*.env

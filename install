@@ -56,8 +56,31 @@ nvm alias default node
 
 echo "NVM and global packages setup complete!"
 
-# WIP
 # git
+# Get the first available GPG signing key
+SIGNING_KEY=$(gpg --list-secret-keys --keyid-format=long | grep -Eo 'rsa[0-9]+/[A-F0-9]+' | cut -d'/' -f2 | head -n1)
+
+# Set up Git config dynamically
+git config --global init.defaultbranch main
+git config --global user.name "Kenneth Solomon"
+git config --global user.email "hello@kennethsolomon.com"
+git config --global credential.useHttpPath true
+git config --global gpg.program "/opt/homebrew/bin/gpg"
+
+# Only set signing key if one is found
+if [ -n "$SIGNING_KEY" ]; then
+  git config --global user.signingkey "$SIGNING_KEY"
+  git config --global commit.gpgsign true
+  echo "✅ Git signing key set: $SIGNING_KEY"
+else
+  echo "⚠️ No GPG signing key found! Skipping commit signing setup."
+fi
+
+# gitignore
+ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
+
+
+# WIP
 
 # TODO
 # karabiner
