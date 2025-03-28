@@ -1,0 +1,41 @@
+#!/usr/bin/env sh
+
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# aliases
+rm $HOME/.aliases
+ln -sf $DOTFILES/aliases/.aliases $HOME/.aliases
+
+# zshrc
+rm $HOME/.zshrc
+ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
+
+# fzf
+rm $HOME/.fzf.zsh
+ln -sf $DOTFILES/fzf/.fzf.zsh $HOME/.fzf.zsh
+
+# alacritty
+rm -rf $HOME/.config/alacritty
+ln -s $DOTFILES/alacritty $HOME/.config/alacritty
+
+# tmux
+ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
+rm -rf $HOME/.tmux/plugins
+ln -sf $DOTFILES/tmux/plugins $HOME/.tmux/plugins
+ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+
+# neovim 
+## Optional with neovim, you can add harpoon
+rm -rf $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+
+# WIP
+# nvm
+
+# TODO
+# git
+# karabiner
+# yabai
+# skhd
+# sketchybar
+#   Fix current sketchybar icon beside wifi

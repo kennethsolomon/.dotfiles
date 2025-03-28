@@ -1,0 +1,44 @@
+alias aliasedit="nvim ~/.aliases"
+alias foo="bar"
+
+# GIT
+alias g="git"
+alias gs="git s"
+alias main='git checkout $([ `git rev-parse --quiet --verify master` ] && echo "master" || echo "main")'
+alias gpsh="git push"
+alias gpo="git pull origin"
+alias gco="git checkout"
+alias gcp="git cherry-pick"
+alias gcpc="git cherry-pick --continue"
+alias gpsht="git push origin tag"
+alias gt="git tag"
+alias grhard="git reset --hard"
+
+gsdrop() {
+    git stash drop stash@{/$1}
+}
+
+gsapply() {
+    git stash apply stash@{/$1}
+}
+
+gspush() {
+    git stash push -m "$1"
+}
+
+gslist() {
+    git stash list
+}
+
+glfind() {
+    git log --grep="$1"
+}
+
+gbfind() {
+    git branch | grep "$1"
+}
+
+# Laravel
+alias sail="./vendor/bin/sail"
+alias sa="sail artisan"
+
