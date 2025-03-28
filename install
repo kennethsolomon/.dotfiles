@@ -24,7 +24,7 @@ rm -rf $HOME/.tmux/plugins
 ln -sf $DOTFILES/tmux/plugins $HOME/.tmux/plugins
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
-# neovim 
+# neovim
 ## Optional with neovim, you can add harpoon
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
@@ -79,11 +79,14 @@ fi
 # gitignore
 ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 
+# karabiner
+rm -rf $HOME/.config/karabiner
+ln -sf $DOTFILES/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 
 # WIP
+# yabai
 
 # TODO
-# karabiner
 # yabai
 # skhd
 # sketchybar
