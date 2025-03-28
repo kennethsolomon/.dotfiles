@@ -29,11 +29,37 @@ ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
+
+# NVM
+# Create NVM directory if it doesn't exist
+mkdir -p $HOME/.nvm
+
+# Symlink default-packages for automatic installation
+ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
+
+# Install NVM if not installed
+if [ ! -d "$HOME/.nvm" ]; then
+  echo "Installing NVM..."
+  curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+else
+  echo "NVM is already installed."
+fi
+
+# Load NVM (needed for further commands)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Install latest LTS Node.js version (automatically installs `default-packages`)
+nvm install --lts
+nvm use --lts
+nvm alias default node
+
+echo "NVM and global packages setup complete!"
+
 # WIP
-# nvm
+# git
 
 # TODO
-# git
 # karabiner
 # yabai
 # skhd

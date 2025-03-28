@@ -1,0 +1,17 @@
+# Node.js Version Management
+npm-check-updates    # Easily check and update outdated dependencies
+
+# Code Formatting & Linting
+@fsouza/prettierd    # Fast Prettier alternative for formatting
+eslint_d             # Faster ESLint daemon for real-time linting
+
+# PHP / Laravel
+intelephense         # PHP language server with Laravel support
+
+# Vue.js / Frontend
+@tailwindcss/language-server   # Tailwind CSS autocomplete
+@volar/vue-language-server     # Vue.js LSP
+
+# Utility
+typescript           # TypeScript CLI tools
+tree-sitter-cli      # Syntax highlighting & parsing
