@@ -8,7 +8,7 @@ const rules: KarabinerRules[] = [
     description: "Hyper Key (⌃⌥⇧⌘)",
     manipulators: [
       {
-        description: "Caps Lock -> Hyper Key",
+        description: "Caps Lock -> Control+Option+Shift+Command",
         from: {
           key_code: "caps_lock",
           modifiers: {
@@ -17,18 +17,14 @@ const rules: KarabinerRules[] = [
         },
         to: [
           {
-            set_variable: {
-              name: "hyper",
-              value: 1,
-            },
+            key_code: "left_control",
+            modifiers: ["left_control", "left_option", "left_shift", "left_command"],
           },
         ],
         to_after_key_up: [
           {
-            set_variable: {
-              name: "hyper",
-              value: 0,
-            },
+            key_code: "left_control",
+            modifiers: [],
           },
         ],
         to_if_alone: [
