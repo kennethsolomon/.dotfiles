@@ -17,13 +17,13 @@ const rules: KarabinerRules[] = [
         },
         to: [
           {
-            key_code: "left_control",
-            modifiers: ["left_control", "left_option", "left_shift", "left_command"],
+            key_code: "left_shift",
+            modifiers: ["left_control", "left_option", "left_command"],
           },
         ],
         to_after_key_up: [
           {
-            key_code: "left_control",
+            key_code: "left_shift",
             modifiers: [],
           },
         ],
