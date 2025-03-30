@@ -116,6 +116,10 @@ brew install jesseduffield/lazygit/lazygit
 
 brew install koekeishiya/formulae/yabai
 
+# install border
+
+brew install felixkratz/formulae/borders
+
 # keyboard shortcuts
 
 brew install koekeishiya/formulae/skhd

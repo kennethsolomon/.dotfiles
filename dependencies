@@ -65,10 +65,14 @@ brew install koekeishiya/formulae/yabai
 # skhd
 brew install koekeishiya/formulae/skhd
 
+# border
+brew install felixkratz/formulae/borders
 
+# start yabai service
 yabai --start-service
 yabai --restart-service
 
-
+# start skhd service
 skhd --start-service
 skhd --restart-service
+
