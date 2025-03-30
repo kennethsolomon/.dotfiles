@@ -3,30 +3,25 @@
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # aliases
-rm $HOME/.aliases
 ln -sf $DOTFILES/aliases/.aliases $HOME/.aliases
 
 # zshrc
-rm $HOME/.zshrc
 ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
 
 # fzf
-rm $HOME/.fzf.zsh
 ln -sf $DOTFILES/fzf/.fzf.zsh $HOME/.fzf.zsh
 
 # alacritty
-rm -rf $HOME/.config/alacritty
 ln -s $DOTFILES/alacritty $HOME/.config/alacritty
 
 # tmux
 ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
-rm -rf $HOME/.tmux/plugins
-ln -sf $DOTFILES/tmux/plugins $HOME/.tmux/plugins
-ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+mkdir $HOME/.tmux
+ln -sf $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf
+ln -sf $DOTFILES/tmux/plugins $HOME/.tmux
 
 # neovim
 ## Optional with neovim, you can add harpoon
-rm -rf $HOME/.config/nvim
 ln -s $DOTFILES/nvim $HOME/.config/nvim
 
 
@@ -81,18 +76,22 @@ ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 
 # karabiner
 rm -rf $HOME/.config/karabiner
-ln -sf $DOTFILES/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
+mkdir $HOME/.config/karabiner
+ln -sf $DOTFILES/karabiner/karabiner.json $HOME/.config
 
 # yabai | need to install first the yabai and skhd
 rm -rf $HOME/.config/yabai
-ln -sf $DOTFILES/yabai/yabairc $HOME/.config/yabai/yabairc
+mkdir $HOME/.config/yabai
+ln -sf $DOTFILES/yabai/yabairc $HOME/.config
 
 rm -rf $HOME/.config/skhd
-ln -sf $DOTFILES/skhd/skhdrc $HOME/.config/skhd/skhdrc
+mkdir $HOME/.config/skhd
+ln -sf $DOTFILES/skhd/skhdrc $HOME/.config
 
 # sketchybar
 rm -rf $HOME/.config/sketchybar
-ln -sf $DOTFILES/sketchybar $HOME/.config/sketchybar
+mkdir $HOME/.config/sketchybar
+ln -sf $DOTFILES/sketchybar $HOME/.config
 
 # TODO
 #   Fix current sketchybar icon beside wifi
