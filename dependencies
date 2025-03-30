@@ -1,0 +1,74 @@
+echo "Installing Dependencies"
+
+# sketchybar
+brew install --cask sf-symbols
+brew install jq
+brew install gh
+brew tap FelixKratz/formulae
+brew install sketchybar
+curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.23/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
+
+brew services restart sketchybar
+
+# fzf
+brew install fzf
+$(brew --prefix)/opt/fzf/install
+
+# install nerd font
+brew install font-meslo-lg-nerd-font
+
+
+# alacritty
+brew install --cask alacritty
+
+
+# theme for alacrity
+brew install powerlevel10k
+source ~/.zshrc
+
+
+# Install Auto suggestion for zhs
+brew install zsh-autosuggestions
+
+
+# Install Syntax Highligh
+brew install zsh-syntax-highlighting
+
+
+# Better version of ls
+brew install eza
+
+
+# Beter version of cd
+brew install zoxide
+
+
+# Tmux
+brew install tmux
+brew install bash
+
+
+# neovim
+brew install neovim
+brew  install ripgrep
+brew install node
+
+
+# Setup lazygit integration
+brew install jesseduffield/lazygit/lazygit
+
+
+# yabai
+brew install koekeishiya/formulae/yabai
+
+
+# skhd
+brew install koekeishiya/formulae/skhd
+
+
+yabai --start-service
+yabai --restart-service
+
+
+skhd --start-service
+skhd --restart-service

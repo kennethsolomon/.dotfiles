@@ -69,8 +69,6 @@ Then reload the tmux configuration by doing CTRL-S (my prefix) followed by r.
 
 ---
 
----
-
 ## Neovim setup
 
 https://www.josean.com/posts/how-to-setup-neovim-2024
@@ -91,3 +89,54 @@ I
 ## Setup lazygit integration
 
 brew install jesseduffield/lazygit/lazygit
+
+---
+
+# yabai
+
+# Configure MacOs Specific Settings
+
+# Open Several Desktops (~7) on Your Machine
+
+# Go To Keyboard Settings > Shortcuts > Mission Control
+
+# Expand Mission Control and Turn On Shortcuts for Switching Spaces 1-7 with “Ctrl + # Of Space”
+
+# Go to System Settings > Accessibility > Display
+
+# Turn On Reduce Motion
+
+# Go To System Settings > Desktop & Dock > Mission Control
+
+# Turn off “Automatically Rearrange Spaces Based On Most Recent Use”
+
+# Personally, I only keep “Displays Have Separate Spaces” turned on here, and that’s what I’d recommend
+
+# window manager
+
+brew install koekeishiya/formulae/yabai
+
+# keyboard shortcuts
+
+brew install koekeishiya/formulae/skhd
+
+# to start yabai on startup
+
+yabai --start-service
+yabai --restart-service
+
+# to start skhd on startup
+
+skhd --start-service
+skhd --restart-service
+
+# Learning More
+
+man yabai
+
+# Sketchybar
+
+brew tap FelixKratz/formulae
+brew install sketchybar
+
+---

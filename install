@@ -83,11 +83,17 @@ ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 rm -rf $HOME/.config/karabiner
 ln -sf $DOTFILES/karabiner/karabiner.json $HOME/.config/karabiner/karabiner.json
 
-# WIP
-# yabai
+# yabai | need to install first the yabai and skhd
+rm -rf $HOME/.config/yabai
+ln -sf $DOTFILES/yabai/yabairc $HOME/.config/yabai/yabairc
+
+rm -rf $HOME/.config/skhd
+ln -sf $DOTFILES/skhd/skhdrc $HOME/.config/skhd/skhdrc
+
+# sketchybar
+rm -rf $HOME/.config/sketchybar
+ln -sf $DOTFILES/sketchybar $HOME/.config/sketchybar
 
 # TODO
-# yabai
-# skhd
-# sketchybar
 #   Fix current sketchybar icon beside wifi
+
