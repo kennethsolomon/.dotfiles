@@ -12,7 +12,7 @@ ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
 ln -sf $DOTFILES/fzf/.fzf.zsh $HOME/.fzf.zsh
 
 # alacritty
-ln -s $DOTFILES/alacritty $HOME/.config/alacritty
+ln -s $DOTFILES/alacritty $HOME/.config/
 
 # tmux
 ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
@@ -22,7 +22,7 @@ ln -sf $DOTFILES/tmux/plugins $HOME/.tmux
 
 # neovim
 ## Optional with neovim, you can add harpoon
-ln -s $DOTFILES/nvim $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/
 
 
 # NVM
@@ -77,21 +77,20 @@ ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 # karabiner
 rm -rf $HOME/.config/karabiner
 mkdir $HOME/.config/karabiner
-ln -sf $DOTFILES/karabiner/karabiner.json $HOME/.config
+ln -sf $DOTFILES/karabiner/karabiner.json $HOME/.config/karabiner
 
 # yabai | need to install first the yabai and skhd
 rm -rf $HOME/.config/yabai
 mkdir $HOME/.config/yabai
-ln -sf $DOTFILES/yabai/yabairc $HOME/.config
+ln -sf $DOTFILES/yabai/yabairc $HOME/.config/yabai
 
 rm -rf $HOME/.config/skhd
 mkdir $HOME/.config/skhd
-ln -sf $DOTFILES/skhd/skhdrc $HOME/.config
+ln -sf $DOTFILES/skhd/skhdrc $HOME/.config/skhd
 
 # sketchybar
 rm -rf $HOME/.config/sketchybar
-mkdir $HOME/.config/sketchybar
-ln -sf $DOTFILES/sketchybar $HOME/.config
+ln -sf $DOTFILES/sketchybar $HOME/.config/sketchybar
 
 # TODO
 #   Fix current sketchybar icon beside wifi
