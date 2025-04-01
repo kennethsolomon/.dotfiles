@@ -116,6 +116,10 @@ brew install jesseduffield/lazygit/lazygit
 
 brew install koekeishiya/formulae/yabai
 
+# install border
+
+brew install felixkratz/formulae/borders
+
 # keyboard shortcuts
 
 brew install koekeishiya/formulae/skhd
@@ -139,4 +143,6 @@ man yabai
 brew tap FelixKratz/formulae
 brew install sketchybar
 
----
+# install font for sketchybar
+
+## cd ~/Downloads && curl -O https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg
