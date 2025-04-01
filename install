@@ -2,6 +2,15 @@
 
 DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# .ssh
+if [ ! -d "$HOME/.ssh" ]; then
+  echo "Creating .ssh folder..."
+  mkdir $HOME/.ssh
+else
+  echo ".ssh folder already exist..."
+fi
+ln -sf $DOTFILES/.ssh/config $HOME/.ssh/config
+
 # aliases
 ln -sf $DOTFILES/aliases/.aliases $HOME/.aliases
 
@@ -51,7 +60,7 @@ nvm alias default node
 
 echo "NVM and global packages setup complete!"
 
-# git
+# gssh -T git@bitbucket.orgit
 # Get the first available GPG signing key
 SIGNING_KEY=$(gpg --list-secret-keys --keyid-format=long | grep -Eo 'rsa[0-9]+/[A-F0-9]+' | cut -d'/' -f2 | head -n1)
 

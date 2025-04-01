@@ -72,6 +72,7 @@ const rules: KarabinerRules[] = [
       s: app("Spotify"),
       p: app("PhpStorm"),
       t: app("Alacritty"),
+      m: app("Microsoft Teams"),
     },
 
     // TODO: This doesn't quite work yet.
