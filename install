@@ -108,7 +108,19 @@ ln -sf $DOTFILES/skhd/skhdrc $HOME/.config/skhd
 rm -rf $HOME/.config/sketchybar
 ln -sf $DOTFILES/sketchybar $HOME/.config/sketchybar
 
-# TODO
-#   Fix current sketchybar icon beside wifi
+# yazi
+if [ ! -d "$HOME/.config/yazi" ]; then
+  echo "Proceed with creating a symlink with yazi..."
+else
+  echo "yazi folder already exist, backing up..."
+  mv $HOME/.config/yazi $HOME/.config/yazi.bak
+  echo "Proceed with creating a symlink with yazi..."
+fi
+
+ln -sf $DOTFILES/yazi $HOME/.config/yazi
+
+
+
+
 
 echo "Please unzip tmux theme"

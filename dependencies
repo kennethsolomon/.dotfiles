@@ -76,3 +76,7 @@ yabai --restart-service
 skhd --start-service
 skhd --restart-service
 
+
+# install yazi
+brew install yazi ffmpegthumbnailer ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide imagemagick font-symbols-only-nerd-font
+ya pack -a yazi-rs/flavors:catppuccin-mocha

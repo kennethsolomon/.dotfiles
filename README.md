@@ -150,3 +150,8 @@ brew install sketchybar
 ## Avante
 
 https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/avante.nvim/README.md
+
+## Yazi
+
+brew install yazi ffmpegthumbnailer ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide imagemagick font-symbols-only-nerd-font
+ya pack -a yazi-rs/flavors:catppuccin-mocha
