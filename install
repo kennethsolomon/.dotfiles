@@ -35,8 +35,7 @@ if [ ! -d "$HOME/.config/nvim" ]; then
 else
   echo "nvim folder already exist, backing up..."
   mv $HOME/.config/nvim $HOME/.config/nvim.bak
-  echo "Creating new folder for nvim..."
-  mkdir $HOME/.config/nvim
+  echo "Proceed with creating a symlink with nvim..."
 fi
 ## Optional with neovim, you can add harpoon
 ln -s $DOTFILES/nvim $HOME/.config/
