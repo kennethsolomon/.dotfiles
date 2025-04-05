@@ -146,3 +146,7 @@ brew install sketchybar
 # install font for sketchybar
 
 ## cd ~/Downloads && curl -O https://devimages-cdn.apple.com/design/resources/download/SF-Pro.dmg
+
+## Avante
+
+https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/avante.nvim/README.md
