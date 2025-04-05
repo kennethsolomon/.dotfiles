@@ -12,9 +12,6 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
--- views can only be fully collapsed with the global statusline
-vim.opt.laststatus = 3
-
 require("lazy").setup({ { import = "kenneth.plugins" }, { import = "kenneth.plugins.lsp" }, { import = "kenneth.plugins.ai"} }, {
 	checker = {
     enabled = true,
