@@ -119,8 +119,4 @@ fi
 
 ln -sf $DOTFILES/yazi $HOME/.config/yazi
 
-
-
-
-
 echo "Please unzip tmux theme"
