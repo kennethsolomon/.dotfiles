@@ -43,18 +43,23 @@ return {
         c = { bg = colors.bg, fg = colors.fg },
       },
       inactive = {
-        a = { bg = colors.inactive_bg, fg = colors.semilightgray, gui = "bold" },
-        b = { bg = colors.inactive_bg, fg = colors.semilightgray },
-        c = { bg = colors.inactive_bg, fg = colors.semilightgray },
+        a = { bg = colors.inactive_bg, fg = colors.fg, gui = "bold" },
+        b = { bg = colors.inactive_bg, fg = colors.fg },
+        c = { bg = colors.inactive_bg, fg = colors.fg },
       },
     }
 
-    -- configure lualine with modified theme
     lualine.setup({
       options = {
         theme = my_lualine_theme,
+        -- other options can go here if needed
       },
       sections = {
+        lualine_a = { "mode" },
+        lualine_b = { "branch" },
+        lualine_c = {
+          { "filename", path = 1 }, -- 👈 relative file path shown here
+        },
         lualine_x = {
           {
             lazy_status.updates,
@@ -65,6 +70,18 @@ return {
           { "fileformat" },
           { "filetype" },
         },
+        lualine_y = { "progress" },
+        lualine_z = { "location" },
+      },
+      inactive_sections = {
+        lualine_a = {},
+        lualine_b = {},
+        lualine_c = {
+          { "filename", path = 1 },
+        },
+        lualine_x = {},
+        lualine_y = {},
+        lualine_z = {},
       },
     })
   end,

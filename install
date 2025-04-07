@@ -29,16 +29,18 @@ mkdir $HOME/.tmux
 ln -sf $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $DOTFILES/tmux/plugins $HOME/.tmux
 
-# neovim
+# nvim
+## Optional with neovim, you can add harpoon
 if [ ! -d "$HOME/.config/nvim" ]; then
   echo "Proceed with creating a symlink with nvim..."
 else
   echo "nvim folder already exist, backing up..."
   mv $HOME/.config/nvim $HOME/.config/nvim.bak
+  rm -rf $HOME/.config/nvim # Make sure to remove the old folder
   echo "Proceed with creating a symlink with nvim..."
 fi
-## Optional with neovim, you can add harpoon
-ln -s $DOTFILES/nvim $HOME/.config/
+
+ln -sf "$DOTFILES/nvim" "$HOME/.config/nvim"
 
 
 # NVM
@@ -114,9 +116,10 @@ if [ ! -d "$HOME/.config/yazi" ]; then
 else
   echo "yazi folder already exist, backing up..."
   mv $HOME/.config/yazi $HOME/.config/yazi.bak
+  rm -rf $HOME/.config/yazi # Make sure to remove the old folder
   echo "Proceed with creating a symlink with yazi..."
 fi
 
-ln -sf $DOTFILES/yazi $HOME/.config/yazi
+ln -sf "$DOTFILES/yazi" "$HOME/.config/yazi"
 
 echo "Please unzip tmux theme"

@@ -45,3 +45,6 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- Set statusline to show the full file path
+opt.statusline = "%f %y %m %r %= %l:%c %p%%"
