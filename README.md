@@ -155,3 +155,7 @@ https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/docs/avant
 
 brew install yazi ffmpegthumbnailer ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide imagemagick font-symbols-only-nerd-font
 ya pack -a yazi-rs/flavors:catppuccin-mocha
+
+## install visidata for csv preview in yazi
+
+brew install visidata
