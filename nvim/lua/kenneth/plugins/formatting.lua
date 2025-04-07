@@ -22,7 +22,7 @@ return {
         python = { "isort", "black" },
       },
       format_on_save = {
-        lsp_fallback = true,
+        lsp_fallback = false, -- change to true if you want formatting on save
         async = false,
         timeout_ms = 1000,
       },
