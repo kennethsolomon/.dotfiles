@@ -159,3 +159,11 @@ ya pack -a yazi-rs/flavors:catppuccin-mocha
 ## install visidata for csv preview in yazi
 
 brew install visidata
+
+## visidata shortcuts
+
+Table Action Shortcut
+Copy single cell (of current row and current column) z Shift+Y
+Copy selected cell(s) (of current column) g z Shift+Y
+Copy single row Shift+Y
+Copy selected row(s) g Shift+Y
