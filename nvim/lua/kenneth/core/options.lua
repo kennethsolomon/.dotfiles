@@ -45,6 +45,3 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
-
--- Set statusline to show the full file path | Probably not needed since already set in lualine plugin
-opt.statusline = "%f %y %m %r %= %l:%c %p%%"
