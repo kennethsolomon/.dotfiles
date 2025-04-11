@@ -1,8 +1,8 @@
 # change window focus within space
-alt - j : yabai -m window --focus south
-alt - k : yabai -m window --focus north
-alt - h : yabai -m window --focus west
-alt - l : yabai -m window --focus east
+alt - n : yabai -m window --focus south
+alt - e : yabai -m window --focus north
+alt - m : yabai -m window --focus west
+alt - i : yabai -m window --focus east
 
 
 #change focus between external displays (left and right)
@@ -23,10 +23,10 @@ shift + alt - x : yabai -m space --mirror x-axis
 shift + alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # resize current window
-shift + alt - u : yabai -m window --resize right:-20:0   # Shrink width from the left
-shift + alt - i : yabai -m window --resize right:20:0   # Expand width to the right
-shift + alt - o : yabai -m window --resize left:-20:0   # Shrink width from the left
-shift + alt - p : yabai -m window --resize left:20:0   # Expand width to the right
+shift + alt - l : yabai -m window --resize right:-20:0   # Shrink width from the left
+shift + alt - u : yabai -m window --resize right:20:0   # Expand width to the right
+shift + alt - y : yabai -m window --resize left:-20:0   # Shrink width from the left
+shift + alt - ; : yabai -m window --resize left:20:0   # Expand width to the right
 #yabai -m window --resize top:0:-20    # Shrink height from the top
 #yabai -m window --resize bottom:0:20  # Expand height to the bottom
 
@@ -38,17 +38,17 @@ shift + alt - e : yabai -m space --balance
 
 
 # swap windows
-shift + alt - j : yabai -m window --swap south
-shift + alt - k : yabai -m window --swap north
-shift + alt - h : yabai -m window --swap west
-shift + alt - l : yabai -m window --swap east
+shift + alt - n : yabai -m window --swap south
+shift + alt - e : yabai -m window --swap north
+shift + alt - m : yabai -m window --swap west
+shift + alt - i : yabai -m window --swap east
 
 
 # move window and split
-ctrl + alt - j : yabai -m window --warp south
-ctrl + alt - k : yabai -m window --warp north
-ctrl + alt - h : yabai -m window --warp west
-ctrl + alt - l : yabai -m window --warp east
+ctrl + alt - n : yabai -m window --warp south
+ctrl + alt - e : yabai -m window --warp north
+ctrl + alt - m : yabai -m window --warp west
+ctrl + alt - i : yabai -m window --warp east
 
 
 # move window to display left and right
