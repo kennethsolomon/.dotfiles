@@ -115,4 +115,8 @@ fi
 
 ln -sf "$DOTFILES/yazi" "$HOME/.config/yazi"
 
+# neofetch
+rm -rf $HOME/.config/neofetch
+ln -sf $DOTFILES/neofetch $HOME/.config/neofetch
+
 echo "Please unzip tmux theme"
