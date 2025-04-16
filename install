@@ -30,7 +30,6 @@ ln -sf $DOTFILES/tmux/.tmux.conf $HOME/.tmux.conf
 ln -sf $DOTFILES/tmux/plugins $HOME/.tmux
 
 # nvim
-## Optional with neovim, you can add harpoon
 if [ ! -d "$HOME/.config/nvim" ]; then
   echo "Proceed with creating a symlink with nvim..."
 else
@@ -42,14 +41,6 @@ fi
 
 ln -sf "$DOTFILES/nvim" "$HOME/.config/nvim"
 
-
-# NVM
-# Create NVM directory if it doesn't exist
-mkdir -p $HOME/.nvm
-
-# Symlink default-packages for automatic installation
-ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
-
 # Install NVM if not installed
 if [ ! -d "$HOME/.nvm" ]; then
   echo "Installing NVM..."
@@ -57,6 +48,8 @@ if [ ! -d "$HOME/.nvm" ]; then
 else
   echo "NVM is already installed."
 fi
+
+ln -sf $DOTFILES/nvm/default-packages $HOME/.nvm/default-packages
 
 # Load NVM (needed for further commands)
 export NVM_DIR="$HOME/.nvm"
