@@ -1,12 +1,11 @@
 return {
 	{
 		"Mofiqul/dracula.nvim",
-		priority = 1000, -- Load before other UI plugins
-		lazy = false, -- Load immediately at startup
+		priority = 1000,
+		lazy = false,
 		config = function()
 			local dracula = require("dracula")
 			dracula.setup({
-				-- customize dracula color palette
 				colors = {
 					bg = "#282A36",
 					fg = "#F8F8F2",
@@ -39,8 +38,19 @@ return {
 				italic_comment = true,
 				overrides = {},
 			})
+
 			vim.cmd.colorscheme("dracula")
+
+			-- Setup nvim-notify with required fields
+			require("notify").setup({
+				background_colour = "#282A36",
+				fps = 60,
+				stages = "fade_in_slide_out",
+				render = "default",
+				timeout = 3000,
+				top_down = true,
+				merge_duplicates = true,
+			})
 		end,
 	},
 }
-
