@@ -29,7 +29,6 @@ return {
 				"html",
 				"cssls",
 				"tailwindcss",
-				"svelte",
 				"lua_ls",
 				"graphql",
 				"emmet_ls",
@@ -37,6 +36,7 @@ return {
 				"pyright",
 				"intelephense", -- PHP Language Server
 				"vtsls", -- Typescript Language Server
+				"volar",
 			},
 		})
 
