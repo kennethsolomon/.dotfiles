@@ -59,7 +59,7 @@ return {
 		end)
 
 		-- Toggle telescope for Harpoon list
-		vim.keymap.set("n", "<C-b>", function()
+		vim.keymap.set("n", "<leader><leader>y", function()
 			toggle_telescope(harpoon:list())
 		end, { desc = "Open harpoon window" })
 	end,
