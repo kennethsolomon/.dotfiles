@@ -180,3 +180,7 @@ Copy selected row(s) g Shift+Y
 
 mkdir -p ~/.config/intelephense
 echo '{"licenseKey": "License Key - Check Email or Drive"}' > ~/.config/intelephense/license.json
+
+> If the above method did not work, you can try this method.
+
+- mkdir $HOME/intelephense/license.txt
