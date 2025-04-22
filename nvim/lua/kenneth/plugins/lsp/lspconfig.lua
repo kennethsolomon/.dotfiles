@@ -215,11 +215,14 @@ return {
 					capabilities = capabilities,
 					filetypes = { "php" },
 					init_options = {
+						-- Disable unnecessary features
 						["language_server_configuration.enabled"] = false,
 						["language_server_diagnostics.enabled"] = false,
 						["language_server_phpstan.enabled"] = false,
 						["language_server_psalm.enabled"] = false,
 						["language_server_completion.trim_leading_dollar"] = false,
+						-- Enable refactoring actions and features
+						["language_server_refactoring.enabled"] = true, -- Enable refactoring
 					},
 					on_attach = function(client, bufnr)
 						-- Disable everything except code actions (refactorings)
@@ -231,9 +234,14 @@ return {
 						client.server_capabilities.signatureHelpProvider = nil
 						client.server_capabilities.documentFormattingProvider = false
 						client.server_capabilities.renameProvider = false
+
 						-- Enable code actions (refactorings)
 						client.server_capabilities.codeActionProvider = true
-						-- Optionally, set keybindings for code actions
+						-- Enable additional refactoring capabilities (e.g., rename, extract methods)
+						client.server_capabilities.renameProvider = true
+						client.server_capabilities.codeActionProvider = true
+
+						-- Optionally, set keybindings for code actions (refactorings)
 						vim.keymap.set(
 							"n",
 							"<leader>ca",
