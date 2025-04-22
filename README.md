@@ -175,3 +175,8 @@ Copy single cell (of current row and current column) z Shift+Y
 Copy selected cell(s) (of current column) g z Shift+Y
 Copy single row Shift+Y
 Copy selected row(s) g Shift+Y
+
+## Install Intelephense License
+
+mkdir -p ~/.config/intelephense
+echo '{"licenseKey": "License Key - Check Email or Drive"}' > ~/.config/intelephense/license.json
