@@ -121,6 +121,9 @@ brew install koekeishiya/formulae/yabai
 https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection
 
+- sudo yabai --load-sa
+- yabai --restart-service
+
 # install border
 
 brew install felixkratz/formulae/borders
