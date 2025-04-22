@@ -18,6 +18,21 @@ return {
 
 		local keymap = vim.keymap -- for conciseness
 
+		-- intelephense
+		local on_attach = function()
+			vim.diagnostic.config({
+				virtual_text = true,
+			})
+		end
+
+		local get_intelephense_license = function()
+			local f = assert(io.open(os.getenv("HOME") .. "/intelephense/license.txt", "rb"))
+			local content = f:read("*a")
+			f:close()
+			return string.gsub(content, "%s+", "")
+		end
+		-- end intelephense
+
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)
@@ -27,7 +42,9 @@ return {
 
 				-- set keybinds
 				opts.desc = "Show LSP references"
-				keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
+				keymap.set("n", "gR", function()
+					require("telescope.builtin").lsp_references({ include_declaration = false })
+				end, opts)
 
 				opts.desc = "Go to declaration"
 				keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
@@ -47,11 +64,17 @@ return {
 				opts.desc = "Smart rename"
 				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
+				opts.desc = "Show signature help"
+				keymap.set("n", "<leader>sg", vim.lsp.buf.signature_help, opts)
+
 				opts.desc = "Show buffer diagnostics"
 				keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
 				opts.desc = "Show line diagnostics"
 				keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+
+				opts.desc = "List diagnostics (Telescope)"
+				keymap.set("n", "<leader>df", "<cmd>Telescope diagnostics<cr>", opts)
 
 				opts.desc = "Go to previous diagnostic"
 				keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -125,8 +148,33 @@ return {
 					},
 				})
 			end,
+			["phpactor"] = function()
+				lspconfig["phpactor"].setup({
+					capabilities = capabilities,
+					init_options = {
+						["language_server_phpstan.enabled"] = false,
+						["language_server_psalm.enabled"] = false,
+						diagnostic = {
+							enable = false, -- disables Phpactor diagnostics (let Intelephense handle it)
+						},
+					},
+					handlers = {
+						["textDocument/completion"] = function() end,
+						["textDocument/hover"] = function() end,
+						["textDocument/definition"] = function() end,
+						["textDocument/references"] = function() end,
+						["textDocument/documentSymbol"] = function() end,
+						["workspace/symbol"] = function() end,
+						["textDocument/publishDiagnostics"] = function() end, -- ✨ disables all diagnostics
+					},
+				})
+			end,
 			["intelephense"] = function()
 				lspconfig["intelephense"].setup({
+					on_attach = on_attach,
+					init_options = {
+						licenceKey = get_intelephense_license(),
+					},
 					capabilities = capabilities,
 					settings = {
 						intelephense = {

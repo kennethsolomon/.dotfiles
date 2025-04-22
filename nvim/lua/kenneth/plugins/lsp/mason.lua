@@ -35,6 +35,7 @@ return {
 				"prismals",
 				"pyright",
 				"intelephense", -- PHP Language Server
+				"phpactor", -- PHP for Refactor/Code Action
 				"vtsls", -- Typescript Language Server
 				"volar",
 			},
