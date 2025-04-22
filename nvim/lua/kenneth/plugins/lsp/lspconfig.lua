@@ -191,9 +191,13 @@ return {
 								enable = true,
 							},
 							completion = {
-								fullyQualifyGlobalConstantsAndFunctions = false,
+								fullyQualifyGlobalConstantsAndFunctions = true,
+								insertUseDeclaration = true,
 								triggerParameterHints = true,
 								maxItems = 100,
+							},
+							phpdoc = {
+								enable = true,
 							},
 							telemetry = {
 								enabled = false, -- Disable telemetry
@@ -208,47 +212,6 @@ return {
 							},
 						},
 					},
-				})
-			end,
-			["phpactor"] = function()
-				lspconfig["phpactor"].setup({
-					capabilities = capabilities,
-					filetypes = { "php" },
-					init_options = {
-						-- Disable unnecessary features
-						["language_server_configuration.enabled"] = false,
-						["language_server_diagnostics.enabled"] = false,
-						["language_server_phpstan.enabled"] = false,
-						["language_server_psalm.enabled"] = false,
-						["language_server_completion.trim_leading_dollar"] = false,
-						-- Enable refactoring actions and features
-						["language_server_refactoring.enabled"] = true, -- Enable refactoring
-					},
-					on_attach = function(client, bufnr)
-						-- Disable everything except code actions (refactorings)
-						client.server_capabilities.hoverProvider = false
-						client.server_capabilities.definitionProvider = false
-						client.server_capabilities.referencesProvider = false
-						client.server_capabilities.documentSymbolProvider = false
-						client.server_capabilities.completionProvider = nil
-						client.server_capabilities.signatureHelpProvider = nil
-						client.server_capabilities.documentFormattingProvider = false
-						client.server_capabilities.renameProvider = false
-
-						-- Enable code actions (refactorings)
-						client.server_capabilities.codeActionProvider = true
-						-- Enable additional refactoring capabilities (e.g., rename, extract methods)
-						client.server_capabilities.renameProvider = true
-						client.server_capabilities.codeActionProvider = true
-
-						-- Optionally, set keybindings for code actions (refactorings)
-						vim.keymap.set(
-							"n",
-							"<leader>ca",
-							vim.lsp.buf.code_action,
-							{ buffer = bufnr, desc = "Show Code Actions" }
-						)
-					end,
 				})
 			end,
 		})
