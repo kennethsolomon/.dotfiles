@@ -28,24 +28,35 @@ return {
 				:find()
 		end
 
+		-- Add the current file to the Harpoon list
 		vim.keymap.set("n", "<leader>a", function()
 			harpoon:list():add()
-		end)
+		end, { desc = "Harpoon: Add file to list" })
+
+		-- Toggle Harpoon quick menu
 		vim.keymap.set("n", "<leader><leader>h", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
-		end)
+		end, { desc = "Harpoon: Toggle quick menu" })
+
+		-- Jump to the first Harpoon mark
 		vim.keymap.set("n", "<leader><leader>j", function()
 			harpoon:list():select(1)
-		end)
+		end, { desc = "Harpoon: Go to mark 1" })
+
+		-- Jump to the second Harpoon mark
 		vim.keymap.set("n", "<leader><leader>k", function()
 			harpoon:list():select(2)
-		end)
+		end, { desc = "Harpoon: Go to mark 2" })
+
+		-- Jump to the third Harpoon mark
 		vim.keymap.set("n", "<leader><leader>l", function()
 			harpoon:list():select(3)
-		end)
+		end, { desc = "Harpoon: Go to mark 3" })
+
+		-- Jump to the fourth Harpoon mark
 		vim.keymap.set("n", "<leader><leader>;", function()
 			harpoon:list():select(4)
-		end)
+		end, { desc = "Harpoon: Go to mark 4" })
 		-- vim.keymap.set("n", "<C-;>", function()
 		-- 	harpoon:list():select(4)
 		-- end)
