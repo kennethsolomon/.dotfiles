@@ -85,21 +85,6 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["svelte"] = function()
-				-- configure svelte server
-				lspconfig["svelte"].setup({
-					capabilities = capabilities,
-					on_attach = function(client, bufnr)
-						vim.api.nvim_create_autocmd("BufWritePost", {
-							pattern = { "*.js", "*.ts" },
-							callback = function(ctx)
-								-- Here use ctx.match instead of ctx.file
-								client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-							end,
-						})
-					end,
-				})
-			end,
 			["graphql"] = function()
 				-- configure graphql language server
 				lspconfig["graphql"].setup({
@@ -150,7 +135,9 @@ return {
 							},
 							environment = {
 								includePaths = {
-									"vendor/php-stubs/laravel", -- Optional: Add custom stub directories
+									"vendor/php-stubs/laravel",
+									"vendor/beyondcode/laravel-websockets/src",
+									"vendor/laravel/framework/src",
 								},
 							},
 							stubs = {
@@ -221,6 +208,39 @@ return {
 							},
 						},
 					},
+				})
+			end,
+			["phpactor"] = function()
+				lspconfig["phpactor"].setup({
+					capabilities = capabilities,
+					filetypes = { "php" },
+					init_options = {
+						["language_server_configuration.enabled"] = false,
+						["language_server_diagnostics.enabled"] = false,
+						["language_server_phpstan.enabled"] = false,
+						["language_server_psalm.enabled"] = false,
+						["language_server_completion.trim_leading_dollar"] = false,
+					},
+					on_attach = function(client, bufnr)
+						-- Disable everything except code actions (refactorings)
+						client.server_capabilities.hoverProvider = false
+						client.server_capabilities.definitionProvider = false
+						client.server_capabilities.referencesProvider = false
+						client.server_capabilities.documentSymbolProvider = false
+						client.server_capabilities.completionProvider = nil
+						client.server_capabilities.signatureHelpProvider = nil
+						client.server_capabilities.documentFormattingProvider = false
+						client.server_capabilities.renameProvider = false
+						-- Enable code actions (refactorings)
+						client.server_capabilities.codeActionProvider = true
+						-- Optionally, set keybindings for code actions
+						vim.keymap.set(
+							"n",
+							"<leader>ca",
+							vim.lsp.buf.code_action,
+							{ buffer = bufnr, desc = "Show Code Actions" }
+						)
+					end,
 				})
 			end,
 		})
