@@ -184,3 +184,7 @@ echo '{"licenseKey": "License Key - Check Email or Drive"}' > ~/.config/inteleph
 > If the above method did not work, you can try this method.
 
 - mkdir $HOME/intelephense/license.txt
+
+# Install the fuck - if not yet installed, already added this in dependencies
+
+brew install thefuck

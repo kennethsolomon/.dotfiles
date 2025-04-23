@@ -51,6 +51,7 @@ alias cd="z"
 # Alias
 source $HOME/.aliases
 
+$(thefuck --alias)
 
 # =========================
 # FZF Integration
@@ -82,3 +83,5 @@ export EDITOR=nvim
 if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
   tmux
 fi
+
+eval $(thefuck --alias)

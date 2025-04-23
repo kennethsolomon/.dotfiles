@@ -83,3 +83,7 @@ ya pack -a yazi-rs/flavors:catppuccin-mocha
 
 ## install visidata for csv preview in yazi
 brew install visidata
+
+
+# Install the fuck
+brew install thefuck
