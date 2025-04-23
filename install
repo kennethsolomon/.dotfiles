@@ -85,6 +85,9 @@ fi
 # gitignore
 ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
 
+# gitconfig
+ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
+
 # karabiner
 rm -rf $HOME/.config/karabiner
 mkdir $HOME/.config/karabiner
@@ -120,3 +123,5 @@ rm -rf $HOME/.config/neofetch
 ln -sf $DOTFILES/neofetch $HOME/.config/neofetch
 
 echo "Please unzip tmux theme"
+
+ln -sf $DOTFILES/fzf-git.sh $HOME/fzf-git.sh
