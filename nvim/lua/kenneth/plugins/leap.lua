@@ -21,8 +21,8 @@ return {
 		pcall(vim.keymap.del, { "n", "x", "o" }, "S")
 
 		-- Set custom mappings
-		vim.keymap.set({ "n", "x", "o" }, "f", "<Plug>(leap-forward)")
-		vim.keymap.set({ "n", "x", "o" }, "F", "<Plug>(leap-backward)")
+		vim.keymap.set({ "n", "x", "o" }, "<leader>j", "<Plug>(leap-forward)")
+		vim.keymap.set({ "n", "x", "o" }, "<leader>k", "<Plug>(leap-backward)")
 
 		-- Suggested additional tweaks
 		-- Define equivalence classes for brackets and quotes, in addition to

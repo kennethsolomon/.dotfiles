@@ -95,3 +95,6 @@ brew install git-delta
 
 # Install tlrc - tldr
 brew install tlrc
+
+# Install bat
+brew install bat
