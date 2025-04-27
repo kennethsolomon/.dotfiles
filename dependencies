@@ -17,14 +17,16 @@ $(brew --prefix)/opt/fzf/install
 # install nerd font
 brew install font-meslo-lg-nerd-font
 
+# install kitty
+brew install --cask kitty
 
 # alacritty
-brew install --cask alacritty
+# brew install --cask alacritty
 
 
 # theme for alacrity
-brew install powerlevel10k
-source ~/.zshrc
+# brew install powerlevel10k
+# source ~/.zshrc
 
 
 # Install Auto suggestion for zhs

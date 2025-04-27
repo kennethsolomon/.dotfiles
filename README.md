@@ -5,26 +5,30 @@
 brew install fzf
 $(brew --prefix)/opt/fzf/install
 
-## Alacrity Setup
+<!-- ## Alacrity Setup -->
+<!---->
+<!-- brew install --cask alacritty -->
+<!-- -> Go to privacy and security and Accept Alacritty -->
+<!---->
+<!-- ## Install Nerd Fonts -->
+<!---->
+<!-- brew install font-meslo-lg-nerd-font -->
+<!---->
+<!-- ~/.config/alacritty -->
+<!---->
+<!-- ## Install Theme for Alacrity -->
+<!---->
+<!-- brew install powerlevel10k -->
+<!---->
+<!-- source ~/.zshrc -->
+<!---->
+<!-- ### If you want to reconfigure the theme -->
+<!---->
+<!-- p10k configure -->
 
-brew install --cask alacritty
--> Go to privacy and security and Accept Alacritty
+# Install Kitty rather than Alacrity
 
-## Install Nerd Fonts
-
-brew install font-meslo-lg-nerd-font
-
-~/.config/alacritty
-
-## Install Theme for Alacrity
-
-brew install powerlevel10k
-
-source ~/.zshrc
-
-### If you want to reconfigure the theme
-
-p10k configure
+brew install --cask kitty
 
 ## Install Auto suggestion for zhs
 
