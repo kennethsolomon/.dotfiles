@@ -1,5 +1,5 @@
 alias aliasedit="nvim ~/.aliases"
-alias foo="bar"
+alias v="nvim"
 
 # GIT
 alias g="git"

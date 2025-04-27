@@ -17,7 +17,7 @@ return {
 		},
 		{
 			-- Open in the current working directory
-			"<leader>cw",
+			"<leader>ee",
 			"<cmd>Yazi cwd<cr>",
 			desc = "Open the file manager in nvim's working directory",
 		},
