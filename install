@@ -20,8 +20,8 @@ ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
 # fzf
 ln -sf $DOTFILES/fzf/.fzf.zsh $HOME/.fzf.zsh
 
-# alacritty
-ln -s $DOTFILES/alacritty $HOME/.config/
+# kitty
+ln -s $DOTFILES/kitty $HOME/.config/
 
 # tmux
 ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
@@ -125,3 +125,4 @@ ln -sf $DOTFILES/neofetch $HOME/.config/neofetch
 echo "Please unzip tmux theme"
 
 ln -sf $DOTFILES/fzf-git.sh $HOME/fzf-git.sh
+

@@ -71,7 +71,7 @@ const rules: KarabinerRules[] = [
       d: app("Obsidian"),
       s: app("Spotify"),
       p: app("PhpStorm"),
-      t: app("Alacritty"),
+      t: app("Kitty"),
       m: app("Microsoft Teams"),
       g: app("Gimp"),
     },
