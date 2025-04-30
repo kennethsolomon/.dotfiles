@@ -124,5 +124,14 @@ ln -sf $DOTFILES/neofetch $HOME/.config/neofetch
 
 echo "Please unzip tmux theme"
 
-ln -sf $DOTFILES/fzf-git.sh $HOME/fzf-git.sh
-
+if [ ! -d "$HOME/fzf-git.sh" ]; then
+  echo "Proceed with creating a symlink with fzf-git.sh..."
+  mkdir $HOME/fzf-git.sh
+  ln -sf $DOTFILES/fzf/fzf-git.sh $HOME/fzf-git.sh
+else
+  echo "fzf-git.sh folder already exist, deleting..."
+  rm $HOME/fzf-git.sh
+  mkdir $HOME/fzf-git.sh
+  ln -sf $DOTFILES/fzf/fzf-git.sh $HOME/fzf-git.sh
+  echo "Proceed with creating a symlink with fzf-git.sh..."
+fi

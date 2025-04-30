@@ -4,7 +4,7 @@ return {
 		require("treesitter-context").setup({
 			mode = "topline",
 			line_numbers = true,
-			max_lines = 8,
+			max_lines = 1,
 			multiwindow = true,
 		})
 	end,

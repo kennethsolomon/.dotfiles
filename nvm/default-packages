@@ -2,7 +2,6 @@ npm-check-updates
 @fsouza/prettierd
 eslint_d
 intelephense
-phpactor
 @tailwindcss/language-server
 @volar/vue-language-server
 typescript

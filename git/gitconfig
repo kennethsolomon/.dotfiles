@@ -1,16 +1,16 @@
 [init]
-    defaultbranch = main
+	defaultbranch = main
 [user]
-    email = hello@kennethsolomon.com
-    name = kenneth solomon
-    signingkey = 44AE23DAECB23F9C8702A0F7B2AC6F9ABA19FBE8
+	email = hello@kennethsolomon.com
+	name = Kenneth Solomon
+	signingkey = F5290D9DD5FDCBD6
 [gpg]
-    program = /opt/homebrew/bin/gpg
+	program = /opt/homebrew/bin/gpg
 [credential]
-    usehttppath = true
+	useHttpPath = true
     helper = osxkeychain
 [commit]
-	gpgSign = false
+	gpgsign = true
 
 [core]
     pager = delta
