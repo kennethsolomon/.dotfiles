@@ -12,7 +12,7 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({ { import = "kenneth.plugins" }, { import = "kenneth.plugins.lsp" }, { import = "kenneth.plugins.ai"} }, {
+require("lazy").setup({ { import = "kenneth.plugins" }, { import = "kenneth.plugins.lsp" }, { import = "kenneth.plugins.ai"}, { import = "kenneth.plugins.laravel"} }, {
 	checker = {
     enabled = true,
     notify = false,
