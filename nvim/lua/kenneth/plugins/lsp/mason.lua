@@ -50,6 +50,7 @@ return {
 				"pylint", -- python linter
 				"eslint_d", -- js linter
 				"pint", -- php formatter
+				"phpstan", -- php linter
 			},
 		})
 	end,
