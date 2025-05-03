@@ -10,7 +10,7 @@
 	useHttpPath = true
     helper = osxkeychain
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [core]
     pager = delta
