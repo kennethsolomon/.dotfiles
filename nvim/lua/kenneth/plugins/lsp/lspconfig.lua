@@ -164,8 +164,12 @@ return {
 						["textDocument/hover"] = function() end,
 						["textDocument/definition"] = function() end,
 						["textDocument/references"] = function() end,
-						["textDocument/documentSymbol"] = function() end,
-						["workspace/symbol"] = function() end,
+            ["textDocument/documentSymbol"] = function(_, _, callback)
+              callback(nil, {})
+            end,
+            ["workspace/symbol"] = function(_, _, callback)
+              callback(nil, {})
+            end,
 						["textDocument/publishDiagnostics"] = function() end, -- ✨ disables all diagnostics
 					},
 				})
