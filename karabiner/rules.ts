@@ -73,7 +73,7 @@ const rules: KarabinerRules[] = [
       t: app("Kitty"),
       m: app("Microsoft Teams"),
       g: app("Gimp"),
-      b: app("DBeaver"),
+      b: app("TablePlus"),
     },
 
     // TODO: This doesn't quite work yet.

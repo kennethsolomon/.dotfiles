@@ -125,3 +125,21 @@ export HERD_PHP_82_INI_SCAN_DIR=$PATH"/Library/Application Support/Herd/config/p
 
 # Herd injected PHP 8.1 configuration.
 export HERD_PHP_81_INI_SCAN_DIR=$PATH"/Library/Application Support/Herd/config/php/81/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/kennethsolomon/Library/Application Support/Herd/bin/":$PATH
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/kennethsolomon/Library/Application Support/Herd/config/php/82/"
+
+
+# Herd injected PHP 7.4 configuration.
+export HERD_PHP_74_INI_SCAN_DIR="/Users/kennethsolomon/Library/Application Support/Herd/config/php/74/"
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/kennethsolomon/Library/Application Support/Herd/config/php/84/"
+
+export PATH="/Applications/Herd.app/Contents/MacOS:$PATH"

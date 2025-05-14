@@ -148,32 +148,32 @@ return {
 					},
 				})
 			end,
-			["phpactor"] = function()
-				lspconfig["phpactor"].setup({
-					capabilities = capabilities,
-					init_options = {
-						["language_server_phpstan.enabled"] = false,
-						["language_server_psalm.enabled"] = false,
-						["language_server.diagnostic_outsource"] = false,
-						diagnostic = {
-							enable = false, -- disables Phpactor diagnostics (let Intelephense handle it)
-						},
-					},
-					handlers = {
-						["textDocument/completion"] = function() end,
-						["textDocument/hover"] = function() end,
-						["textDocument/definition"] = function() end,
-						["textDocument/references"] = function() end,
-            ["textDocument/documentSymbol"] = function(_, _, callback)
-              callback(nil, {})
-            end,
-            ["workspace/symbol"] = function(_, _, callback)
-              callback(nil, {})
-            end,
-						["textDocument/publishDiagnostics"] = function() end, -- ✨ disables all diagnostics
-					},
-				})
-			end,
+			-- ["phpactor"] = function()
+			-- 	lspconfig["phpactor"].setup({
+			-- 		capabilities = capabilities,
+			-- 		init_options = {
+			-- 			["language_server_phpstan.enabled"] = false,
+			-- 			["language_server_psalm.enabled"] = false,
+			-- 			["language_server.diagnostic_outsource"] = false,
+			-- 			diagnostic = {
+			-- 				enable = false, -- disables Phpactor diagnostics (let Intelephense handle it)
+			-- 			},
+			-- 		},
+			-- 		handlers = {
+			-- 			["textDocument/completion"] = function() end,
+			-- 			["textDocument/hover"] = function() end,
+			-- 			["textDocument/definition"] = function() end,
+			-- 			["textDocument/references"] = function() end,
+   --          ["textDocument/documentSymbol"] = function(_, _, callback)
+   --            callback(nil, {})
+   --          end,
+   --          ["workspace/symbol"] = function(_, _, callback)
+   --            callback(nil, {})
+   --          end,
+			-- 			["textDocument/publishDiagnostics"] = function() end, -- ✨ disables all diagnostics
+			-- 		},
+			-- 	})
+			-- end,
 			["intelephense"] = function()
 				lspconfig["intelephense"].setup({
 					on_attach = on_attach,

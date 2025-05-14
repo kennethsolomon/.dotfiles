@@ -568,10 +568,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'DBeaver.app'"
+                    "shell_command": "open -a 'TablePlus.app'"
                   }
                 ],
-                "description": "Open -a 'DBeaver.app'",
+                "description": "Open -a 'TablePlus.app'",
                 "type": "basic",
                 "from": {
                   "key_code": "b",
