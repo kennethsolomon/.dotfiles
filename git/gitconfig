@@ -4,6 +4,8 @@
 	email = hello@kennethsolomon.com
 	name = Kenneth Solomon
 	signingkey = F5290D9DD5FDCBD6
+[rerere]
+  enabled = true
 [gpg]
 	program = /opt/homebrew/bin/gpg
 [credential]
