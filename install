@@ -135,3 +135,6 @@ else
   ln -sf $DOTFILES/fzf/fzf-git.sh $HOME/fzf-git.sh
   echo "Proceed with creating a symlink with fzf-git.sh..."
 fi
+
+# Change this to your lazy git path by running : lazygit --print-config-dir
+ln -sf $DOTFILES/lazygit /Users/kennethsolomon/Library/Application Support/lazygit/config.yml
