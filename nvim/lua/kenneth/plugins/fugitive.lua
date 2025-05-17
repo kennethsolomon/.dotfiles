@@ -13,7 +13,8 @@ return {
     { '<leader>gb', ':Git blame<CR>', desc = 'Git blame' },
 
     -- Log
-    { '<leader>gl', ':Git log --oneline --graph --decorate<CR>', desc = 'Git log' },
+    { '<leader>gl', ':Git log --graph --decorate<CR>', desc = 'Git log' },
+    { '<leader>glo', ':Git log --graph --oneline --decorate<CR>', desc = 'Git log' },
 
     -- Commit
     { '<leader>gc', ':Git commit<CR>', desc = 'Git commit' },
