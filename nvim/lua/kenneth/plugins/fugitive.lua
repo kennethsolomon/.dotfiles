@@ -17,7 +17,7 @@ return {
     { '<leader>glo', ':Git log --graph --oneline --decorate<CR>', desc = 'Git log' },
 
     -- Commit
-    { '<leader>gc', ':Git commit<CR>', desc = 'Git commit' },
+    { '<leader>gc', ':Git commit ', desc = 'Git commit' },
 
     -- Push
     { '<leader>gp', ':Git push<CR>', desc = 'Git push' },
