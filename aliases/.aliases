@@ -40,6 +40,9 @@ gbfind() {
 
 # Laravel
 alias sail="./vendor/bin/sail"
+alias pint="./vendor/bin/pint --config pint.json"
+alias rector="./vendor/bin/rector"
+alias larastan="./vendor/bin/phpstan analyse --memory-limit=2G"
 alias sa="sail artisan"
 
 
