@@ -1,3 +1,6 @@
+# Don't use this, this still in beta
+
+
 ## fzf
 
 ### Only run this if fzf history is not working | ctrl + r
