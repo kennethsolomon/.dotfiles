@@ -147,126 +147,130 @@ return {
 						},
 					},
 				})
-			end,
-			-- ["phpactor"] = function()
-			-- 	lspconfig["phpactor"].setup({
-			-- 		capabilities = capabilities,
-			-- 		init_options = {
-			-- 			["language_server_phpstan.enabled"] = false,
-			-- 			["language_server_psalm.enabled"] = false,
-			-- 			["language_server.diagnostic_outsource"] = false,
-			-- 			diagnostic = {
-			-- 				enable = false, -- disables Phpactor diagnostics (let Intelephense handle it)
-			-- 			},
-			-- 		},
-			-- 		handlers = {
-			-- 			["textDocument/completion"] = function() end,
-			-- 			["textDocument/hover"] = function() end,
-			-- 			["textDocument/definition"] = function() end,
-			-- 			["textDocument/references"] = function() end,
-   --          ["textDocument/documentSymbol"] = function(_, _, callback)
-   --            callback(nil, {})
-   --          end,
-   --          ["workspace/symbol"] = function(_, _, callback)
-   --            callback(nil, {})
-   --          end,
-			-- 			["textDocument/publishDiagnostics"] = function() end, -- ✨ disables all diagnostics
-			-- 		},
-			-- 	})
-			-- end,
-			["intelephense"] = function()
-				lspconfig["intelephense"].setup({
-					on_attach = on_attach,
-					init_options = {
-						licenceKey = get_intelephense_license(),
-					},
-					capabilities = capabilities,
-					settings = {
-						intelephense = {
-							files = {
-								maxSize = 5000000, -- Increase file size limit if needed for large Laravel projects
-							},
-							environment = {
-								includePaths = {
-									"vendor/php-stubs/laravel",
-									"vendor/beyondcode/laravel-websockets/src",
-									"vendor/laravel/framework/src",
-								},
-							},
-							stubs = {
-								"bcmath",
-								"bz2",
-								"calendar",
-								"Core",
-								"curl",
-								"date",
-								"dom",
-								"fileinfo",
-								"filter",
-								"gd",
-								"hash",
-								"iconv",
-								"json",
-								"libxml",
-								"mbstring",
-								"mcrypt",
-								"mysql",
-								"mysqli",
-								"password",
-								"pcntl",
-								"pcre",
-								"PDO",
-								"pdo_mysql",
-								"Phar",
-								"posix",
-								"readline",
-								"Reflection",
-								"session",
-								"SimpleXML",
-								"sockets",
-								"sodium",
-								"SPL",
-								"standard",
-								"superglobals",
-								"tokenizer",
-								"xml",
-								"xdebug",
-								"zip",
-								"zlib",
-								-- Framework/Plugin stubs
-								"wordpress",
-								"woocommerce",
-								"acf-pro",
-								"laravel",
-								"lumen",
-							},
-							diagnostics = {
-								enable = true,
-							},
-							completion = {
-								fullyQualifyGlobalConstantsAndFunctions = true,
-								insertUseDeclaration = true,
-								triggerParameterHints = true,
-								maxItems = 100,
-							},
-							phpdoc = {
-								enable = true,
-							},
-							telemetry = {
-								enabled = false, -- Disable telemetry
-							},
-							indexing = {
-								excluded = {
-									"**/vendor/**",
-									"**/node_modules/**",
-									"**/.git/**",
-									"**/storage/**",
-								},
-							},
-						},
-					},
-				})
-			end,
-		})
-	end,
+      end,
+      -- ["phpactor"] = function()
+      --   lspconfig["phpactor"].setup({
+      --     capabilities = capabilities,
+      --     filetypes = { "php" }, -- Attach only for PHP files
+      --     init_options = {
+      --       ["language_server_phpstan.enabled"] = false,
+      --       ["language_server_psalm.enabled"] = false,
+      --       ["language_server.diagnostic_outsource"] = false,
+      --       diagnostic = { enable = false },
+      --     },
+      --     settings = {
+      --       phpactor = {
+      --         indexing = {
+      --           enabled = false, -- 🚫 Disable indexing
+      --         },
+      --       },
+      --     },
+      --     handlers = {
+      --       ["textDocument/completion"] = function() end,
+      --       ["textDocument/hover"] = function() end,
+      --       ["textDocument/definition"] = function() end,
+      --       ["textDocument/references"] = function() end,
+      --       ["textDocument/documentSymbol"] = function(_, _, callback) callback(nil, {}) end,
+      --       ["workspace/symbol"] = function(_, _, callback) callback(nil, {}) end,
+      --       ["textDocument/publishDiagnostics"] = function() end,
+      --       -- ✅ Keep only this for refactors/code actions
+      --       -- (Phpactor still provides refactorings here)
+      --     },
+      --   })
+      -- end,
+      ["intelephense"] = function()
+        lspconfig["intelephense"].setup({
+          on_attach = on_attach,
+          init_options = {
+            licenceKey = get_intelephense_license(),
+          },
+          capabilities = capabilities,
+          settings = {
+            intelephense = {
+              files = {
+                maxSize = 5000000, -- Increase file size limit if needed for large Laravel projects
+              },
+              environment = {
+                includePaths = {
+                  "vendor/php-stubs/laravel",
+                  "vendor/beyondcode/laravel-websockets/src",
+                  "vendor/laravel/framework/src",
+                },
+              },
+              stubs = {
+                "bcmath",
+                "bz2",
+                "calendar",
+                "Core",
+                "curl",
+                "date",
+                "dom",
+                "fileinfo",
+                "filter",
+                "gd",
+                "hash",
+                "iconv",
+                "json",
+                "libxml",
+                "mbstring",
+                "mcrypt",
+                "mysql",
+                "mysqli",
+                "password",
+                "pcntl",
+                "pcre",
+                "PDO",
+                "pdo_mysql",
+                "Phar",
+                "posix",
+                "readline",
+                "Reflection",
+                "session",
+                "SimpleXML",
+                "sockets",
+                "sodium",
+                "SPL",
+                "standard",
+                "superglobals",
+                "tokenizer",
+                "xml",
+                "xdebug",
+                "zip",
+                "zlib",
+                -- Framework/Plugin stubs
+                "wordpress",
+                "woocommerce",
+                "acf-pro",
+                "laravel",
+                "lumen",
+              },
+              diagnostics = {
+                enable = true,
+              },
+              completion = {
+                fullyQualifyGlobalConstantsAndFunctions = true,
+                insertUseDeclaration = true,
+                triggerParameterHints = true,
+                maxItems = 100,
+              },
+              phpdoc = {
+                enable = true,
+              },
+              telemetry = {
+                enabled = false, -- Disable telemetry
+              },
+              indexing = {
+                excluded = {
+                  "**/vendor/**",
+                  "**/node_modules/**",
+                  "**/.git/**",
+                  "**/storage/**",
+                },
+              },
+            },
+          },
+        })
+      end,
+    })
+  end,
 }
