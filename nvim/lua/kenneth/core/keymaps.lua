@@ -34,3 +34,27 @@ keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer
 -- Center the view when using ctrl d and ctrl u
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
+
+
+keymap.set('n', '<leader>sr', function()
+  local from = vim.fn.input("Replace: ")
+  if from == "" then return end
+  local to = vim.fn.input("With: ")
+  if to == "" then return end
+  vim.cmd(':%s/' .. from .. '/' .. to .. '/g')
+end, { desc = "Substitute text dynamically", noremap = true, silent = false })
+
+keymap.set('n', '<leader>sR', function()
+  local from = vim.fn.input("Replace: ")
+  if from == "" then return end
+  local to = vim.fn.input("With: ")
+  if to == "" then return end
+  vim.cmd(':%s/' .. from .. '/' .. to .. '/gi')
+end, { desc = "Case-insensitive global replace", noremap = true })
+
+keymap.set('n', '<leader>nf', function()
+  local name = vim.fn.input("New file name: ")
+  if name ~= "" then
+    vim.cmd('edit ' .. name)
+  end
+end, { desc = "Create new file", noremap = true })

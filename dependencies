@@ -100,3 +100,9 @@ brew install tlrc
 
 # Install bat
 brew install bat
+
+# Install mysql-client
+brew install mysql-client
+
+# Install sqlite3
+brew install sqlite3

@@ -195,3 +195,6 @@ echo '{"licenseKey": "License Key - Check Email or Drive"}' > ~/.config/inteleph
 # Install the fuck - if not yet installed, already added this in dependencies
 
 brew install thefuck
+
+
+# Need to configure mysql-client/sqlite3 for dadbod nvim

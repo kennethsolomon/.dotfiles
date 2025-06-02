@@ -44,6 +44,7 @@ alias pint="./vendor/bin/pint --config pint.json"
 alias rector="./vendor/bin/rector"
 alias larastan="./vendor/bin/phpstan analyse --memory-limit=2G"
 alias sa="sail artisan"
+alias peck="./vendor/bin/peck"
 
 
 # GIT FZF
@@ -216,3 +217,4 @@ alias gfs='_fzf_git_stashes'     # 🥡 Git Stashes
 alias gfl='_fzf_git_lreflogs'    # 📒 Git Reflogs
 alias gfe='_fzf_git_each_ref'    # ☘️  Git Each Ref
 alias gfw='_fzf_git_worktrees'   # 🌴 Git Worktrees
+

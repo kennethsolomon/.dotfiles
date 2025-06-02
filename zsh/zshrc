@@ -143,3 +143,6 @@ export HERD_PHP_74_INI_SCAN_DIR="/Users/kennethsolomon/Library/Application Suppo
 export HERD_PHP_84_INI_SCAN_DIR="/Users/kennethsolomon/Library/Application Support/Herd/config/php/84/"
 
 export PATH="/Applications/Herd.app/Contents/MacOS:$PATH"
+
+# MySQL
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"

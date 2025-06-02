@@ -195,6 +195,7 @@ return {
                   "vendor/php-stubs/laravel",
                   "vendor/beyondcode/laravel-websockets/src",
                   "vendor/laravel/framework/src",
+                  vim.fn.getcwd() .. "/stubs"
                 },
               },
               stubs = {
@@ -243,6 +244,7 @@ return {
                 "acf-pro",
                 "laravel",
                 "lumen",
+                "pest"
               },
               diagnostics = {
                 enable = true,
