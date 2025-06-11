@@ -138,3 +138,6 @@ export PATH="/Applications/Herd.app/Contents/MacOS:$PATH"
 
 # MySQL
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# PhpStorm
+export PATH="/Applications/PhpStorm.app/Contents/MacOS:$PATH"
