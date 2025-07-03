@@ -45,3 +45,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- scroll
+opt.sidescrolloff = 999
+opt.scrolloff = 999
